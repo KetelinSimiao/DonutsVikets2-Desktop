@@ -1,0 +1,18 @@
+﻿using DonutsVikets.DTO;
+
+namespace DonutsVikets.BLL
+{
+    public class Session
+        {
+            public static UsuarioDTO UsuarioLogado { get; set; }
+
+            private static string _user;
+
+            public static string user
+            {
+                get { return Session._user; }
+                set { Session._user = value; }
+            }
+        }
+    }
+

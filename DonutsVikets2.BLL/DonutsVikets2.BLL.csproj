@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DonutsVikets2.DAL\DonutsVikets2.DAL.csproj" />
+    <ProjectReference Include="..\DonutsVikets2.DTO\DonutsVikets2.DTO.csproj" />
+  </ItemGroup>
+
+</Project>
