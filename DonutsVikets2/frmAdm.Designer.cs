@@ -39,14 +39,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             pictureBox1 = new PictureBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             btnFuncionario = new Guna.UI2.WinForms.Guna2Button();
             btnCadAcesso = new Guna.UI2.WinForms.Guna2Button();
             btnProduto = new Guna.UI2.WinForms.Guna2Button();
-            panelconteudo = new Guna.UI2.WinForms.Guna2Panel();
+            panelConteudo2 = new Guna.UI2.WinForms.Guna2Panel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            Pesquisar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,10 +68,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-202, 1);
+            pictureBox1.Location = new Point(2, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1108, 471);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.Size = new Size(650, 456);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -101,7 +107,7 @@
             btnFuncionario.FillColor = Color.PowderBlue;
             btnFuncionario.Font = new Font("Segoe UI", 9F);
             btnFuncionario.ForeColor = Color.White;
-            btnFuncionario.Location = new Point(24, 132);
+            btnFuncionario.Location = new Point(22, 137);
             btnFuncionario.Name = "btnFuncionario";
             btnFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnFuncionario.Size = new Size(120, 51);
@@ -122,7 +128,7 @@
             btnCadAcesso.FillColor = Color.PowderBlue;
             btnCadAcesso.Font = new Font("Segoe UI", 9F);
             btnCadAcesso.ForeColor = Color.White;
-            btnCadAcesso.Location = new Point(24, 179);
+            btnCadAcesso.Location = new Point(22, 216);
             btnCadAcesso.Name = "btnCadAcesso";
             btnCadAcesso.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnCadAcesso.Size = new Size(120, 51);
@@ -143,7 +149,7 @@
             btnProduto.FillColor = Color.PowderBlue;
             btnProduto.Font = new Font("Segoe UI", 9F);
             btnProduto.ForeColor = Color.White;
-            btnProduto.Location = new Point(24, 236);
+            btnProduto.Location = new Point(12, 322);
             btnProduto.Name = "btnProduto";
             btnProduto.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnProduto.Size = new Size(120, 51);
@@ -151,24 +157,66 @@
             btnProduto.Text = "Cad.Produto";
             btnProduto.Click += btnProduto_Click;
             // 
-            // panelconteudo
+            // panelConteudo2
             // 
-            panelconteudo.CustomizableEdges = customizableEdges9;
-            panelconteudo.Location = new Point(186, 114);
-            panelconteudo.Name = "panelconteudo";
-            panelconteudo.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            panelconteudo.Size = new Size(514, 335);
-            panelconteudo.TabIndex = 3;
+            panelConteudo2.CustomizableEdges = customizableEdges9;
+            panelConteudo2.Location = new Point(246, 111);
+            panelConteudo2.Name = "panelConteudo2";
+            panelConteudo2.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            panelConteudo2.Size = new Size(366, 327);
+            panelConteudo2.TabIndex = 3;
+            panelConteudo2.Paint += panelconteudo_Paint;
+            // 
+            // backgroundWorker1
+            // 
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+            // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.CustomizableEdges = customizableEdges11;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Segoe UI", 9F);
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new Point(246, 69);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox1.Size = new Size(264, 36);
+            guna2TextBox1.TabIndex = 4;
+            // 
+            // Pesquisar
+            // 
+            Pesquisar.CustomizableEdges = customizableEdges13;
+            Pesquisar.DisabledState.BorderColor = Color.DarkGray;
+            Pesquisar.DisabledState.CustomBorderColor = Color.DarkGray;
+            Pesquisar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Pesquisar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Pesquisar.Font = new Font("Segoe UI", 9F);
+            Pesquisar.ForeColor = Color.White;
+            Pesquisar.Location = new Point(516, 69);
+            Pesquisar.Name = "Pesquisar";
+            Pesquisar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            Pesquisar.Size = new Size(96, 33);
+            Pesquisar.TabIndex = 5;
+            Pesquisar.Text = "Pesquisar";
             // 
             // frmAdm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(712, 450);
-            Controls.Add(panelconteudo);
-            Controls.Add(btnProduto);
+            ClientSize = new Size(624, 450);
+            Controls.Add(Pesquisar);
+            Controls.Add(guna2TextBox1);
             Controls.Add(btnCadAcesso);
             Controls.Add(btnFuncionario);
+            Controls.Add(panelConteudo2);
+            Controls.Add(btnProduto);
             Controls.Add(guna2Button1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
@@ -188,5 +236,8 @@
         private Guna.UI2.WinForms.Guna2Button btnProduto;
         private Guna.UI2.WinForms.Guna2Panel panelconteudo;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button Pesquisar;
+        private Guna.UI2.WinForms.Guna2Panel panelConteudo2;
     }
 }

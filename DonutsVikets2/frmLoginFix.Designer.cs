@@ -38,6 +38,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnFechar = new Guna.UI2.WinForms.Guna2CircleButton();
             btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
             btnEntrar = new Guna.UI2.WinForms.Guna2Button();
@@ -45,6 +46,7 @@
             txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             pictureBox2 = new PictureBox();
             mdEntrar = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -84,6 +86,7 @@
             btnCadastrar.Size = new Size(96, 31);
             btnCadastrar.TabIndex = 14;
             btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // btnEntrar
             // 
@@ -110,7 +113,7 @@
             txtSenha.BackColor = Color.FromArgb(255, 188, 217);
             txtSenha.BorderRadius = 20;
             txtSenha.CustomizableEdges = customizableEdges6;
-            txtSenha.DefaultText = "Senha";
+            txtSenha.DefaultText = "";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSenha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtSenha.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -121,18 +124,19 @@
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Location = new Point(434, 301);
             txtSenha.Name = "txtSenha";
-            txtSenha.PlaceholderText = "";
+            txtSenha.PlaceholderText = "Senha";
             txtSenha.SelectedText = "";
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges7;
             txtSenha.Size = new Size(152, 42);
             txtSenha.TabIndex = 12;
+            txtSenha.TextChanged += txtSenha_TextChanged_1;
             // 
             // txtUsuario
             // 
             txtUsuario.BackColor = Color.FromArgb(255, 188, 217);
             txtUsuario.BorderRadius = 20;
             txtUsuario.CustomizableEdges = customizableEdges8;
-            txtUsuario.DefaultText = "Login";
+            txtUsuario.DefaultText = "";
             txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtUsuario.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -143,16 +147,17 @@
             txtUsuario.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsuario.Location = new Point(434, 194);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.PlaceholderText = "";
+            txtUsuario.PlaceholderText = "Login";
             txtUsuario.SelectedText = "";
             txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges9;
             txtUsuario.Size = new Size(165, 43);
             txtUsuario.TabIndex = 13;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Pink_Aesthetic_Linktree_Background__5_;
-            pictureBox2.Location = new Point(-21, 2);
+            pictureBox2.Location = new Point(-21, 3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(754, 434);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -166,11 +171,31 @@
             mdEntrar.DockIndicatorTransparencyValue = 0.6D;
             mdEntrar.TransparentWhileDrag = true;
             // 
+            // guna2CircleButton1
+            // 
+            guna2CircleButton1.BackColor = Color.FromArgb(255, 188, 217);
+            guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton1.FillColor = Color.DarkRed;
+            guna2CircleButton1.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton1.ForeColor = Color.White;
+            guna2CircleButton1.Location = new Point(685, 12);
+            guna2CircleButton1.Name = "guna2CircleButton1";
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton1.Size = new Size(38, 24);
+            guna2CircleButton1.TabIndex = 18;
+            guna2CircleButton1.Text = " X";
+            guna2CircleButton1.Click += guna2CircleButton1_Click;
+            // 
             // frmLoginFix
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(735, 439);
+            Controls.Add(guna2CircleButton1);
             Controls.Add(btnFechar);
             Controls.Add(btnCadastrar);
             Controls.Add(btnEntrar);
@@ -193,5 +218,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUsuario;
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2BorderlessForm mdEntrar;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

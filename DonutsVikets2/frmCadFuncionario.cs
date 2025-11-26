@@ -38,7 +38,7 @@ namespace DonutsVikets2.UI
             var funcionario = new FuncionarioDTO()
             {
                 Id = Database.Usuarios.Count + 1,
-                Nome = txtNomeFun.Text,
+                Nome = txtNome.Text,
                 CPF = int.Parse(txtCPF.Text),
                 DataNascimento = dtpDataNascimento.Value,
                 Contato = txtContato.Text,
@@ -51,7 +51,7 @@ namespace DonutsVikets2.UI
 
             MessageBox.Show($"Funcionario {funcionario.Nome} cadastrado com sucesso!");
 
-       txtNomeFun.Text = string.Empty;
+       txtNome.Text = string.Empty;
             txtCPF.Text = string.Empty;
             txtContato.Text = string.Empty;
             txtCargo.Text = string.Empty;
