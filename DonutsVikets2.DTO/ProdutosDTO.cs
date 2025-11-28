@@ -4,12 +4,12 @@
     {
        public int Id { get; set; }
         public string Nome { get; set; } = string.Empty;
-        public DateTime DataValidade { get; set; }
-        public double Preco {  get; set; }
+        public string Categoria { get; set; }
+        public string Preco {  get; set; }
         public string Descricao { get; set; }
-        public int QuantidadeEstoque {  get; set; }
-        public string Sabor {  get; set; }
-        public DateTime DataFabricacao {  get; set; }
+        public string Disponivel {  get; set; }
+        public string TempoPreparo {  get; set; }
+        public string DataCadastro {  get; set; }
 
     }
 }

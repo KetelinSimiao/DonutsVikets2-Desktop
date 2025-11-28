@@ -107,7 +107,7 @@
             btnFuncionario.FillColor = Color.PowderBlue;
             btnFuncionario.Font = new Font("Segoe UI", 9F);
             btnFuncionario.ForeColor = Color.White;
-            btnFuncionario.Location = new Point(22, 137);
+            btnFuncionario.Location = new Point(22, 144);
             btnFuncionario.Name = "btnFuncionario";
             btnFuncionario.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnFuncionario.Size = new Size(120, 51);
@@ -149,7 +149,7 @@
             btnProduto.FillColor = Color.PowderBlue;
             btnProduto.Font = new Font("Segoe UI", 9F);
             btnProduto.ForeColor = Color.White;
-            btnProduto.Location = new Point(12, 322);
+            btnProduto.Location = new Point(22, 323);
             btnProduto.Name = "btnProduto";
             btnProduto.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnProduto.Size = new Size(120, 51);

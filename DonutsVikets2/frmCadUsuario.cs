@@ -13,10 +13,10 @@ using DonutsVikets.DTO;
 
 namespace DonutsVikets2.UI
 {
-    public partial class frmCadUsuario : Form
+    public partial class frmFuncionario : Form
     {
         private readonly UsuarioBLL usuarioBLL = new();
-        public frmCadUsuario()
+        public frmFuncionario()
         {
             InitializeComponent();
         }

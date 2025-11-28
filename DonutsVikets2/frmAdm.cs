@@ -30,8 +30,8 @@ namespace DonutsVikets2.UI
 
         private void btnFuncionario_Click(object sender, EventArgs e)
         {
-            panelConteudo2.Controls.Clear();
-            AbrirUserControl(new ucFuncionario());
+            frmCadFuncionario frmCadFuncionario = new();
+            frmCadFuncionario.Show();
         }
 
         private void AbrirUserControl(UserControl uc)
@@ -44,7 +44,7 @@ namespace DonutsVikets2.UI
 
         private void btnCadAcesso_Click(object sender, EventArgs e)
         {
-            frmCadUsuario frmCadUsuario = new();
+            frmFuncionario frmCadUsuario = new();
             frmCadUsuario.Show();
         }
 
@@ -60,77 +60,77 @@ namespace DonutsVikets2.UI
         }
 
         private void dgFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = panelConteudo2.Rows[e.RowIndex];
+        { }
+        //    if (e.RowIndex >= 0)
+        //    {
+        //        DataGridViewRow row = panelConteudo2.Rows[e.RowIndex];
 
-                usuarioSelecionadoId = Convert.ToInt32(row.Cells["Id"].Value);
-                txtNome.Text = row.Cells["Nome"].Value.ToString();
-                txtUser.Text = row.Cells["Nome"].Value.ToString();
-                txtSenha.Text = row.Cells["Nome"].Value.ToString();
+        //        usuarioSelecionadoId = Convert.ToInt32(row.Cells["Id"].Value);
+        //        txtNome.Text = row.Cells["Nome"].Value.ToString();
+        //        txtUser.Text = row.Cells["Nome"].Value.ToString();
+        //        txtSenha.Text = row.Cells["Nome"].Value.ToString();
 
 
-                btnAtualizar.Enabled = true;
-            }
-        }
-        private void AtualizarGrid()
-        {
-            panelConteudo2.Columns.Clear();
-            panelConteudo2.AutoGenerateColumns = false;
-            panelConteudo2.RowTemplate.Height = 60;
-            panelConteudo2.Height = 60;
-            panelConteudo2.AllowUserToAddRows = false;
+        //        btnAtualizar.Enabled = true;
+        //    }
+        //}
+        //private void AtualizarGrid()
+        //{
+        //    panelConteudo2.Columns.Clear();
+        //    panelConteudo2.AutoGenerateColumns = false;
+        //    panelConteudo2.RowTemplate.Height = 60;
+        //    panelConteudo2.Height = 60;
+        //    panelConteudo2.AllowUserToAddRows = false;
 
-            var colFoto = new DataGridViewImageColumn
-            {
-                HeaderText = "Foto",
-                Name = "Foto",
-                DataPropertyName = "Foto",
-                ImageLayout = DataGridViewImageCellLayout.Zoom
-            };
+        //    var colFoto = new DataGridViewImageColumn
+        //    {
+        //        HeaderText = "Foto",
+        //        Name = "Foto",
+        //        DataPropertyName = "Foto",
+        //        ImageLayout = DataGridViewImageCellLayout.Zoom
+        //    };
 
-            dgUsuario.Columns.Add(colFoto);
+        //    dgUsuario.Columns.Add(colFoto);
 
-            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "ID", Name = "Id" });
-            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Nome", HeaderText = "Nome", Name = "Nome" });
-            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Login", HeaderText = "User", Name = "Login" });
-            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Senha", HeaderText = "Senha", Name = "Senha" });
-            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "UrlFoto", HeaderText = "UrlFoto", Name = "UrlFoto" });
+        //    dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "ID", Name = "Id" });
+        //    dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Nome", HeaderText = "Nome", Name = "Nome" });
+        //    dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Login", HeaderText = "User", Name = "Login" });
+        //    dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Senha", HeaderText = "Senha", Name = "Senha" });
+        //    dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "UrlFoto", HeaderText = "UrlFoto", Name = "UrlFoto" });
 
-            var usuarios = usuarioBLL.ListarUsuario();
+        //    var usuarios = usuarioBLL.ListarUsuario();
 
-            var dt = new DataTable();
-            dt.Columns.Add("Foto", typeof(Image));
-            dt.Columns.Add("Id", typeof(int));
-            dt.Columns.Add("Nome", typeof(string));
-            dt.Columns.Add("Login", typeof(string));
-            dt.Columns.Add("Senha", typeof(string));
-            dt.Columns.Add("UrlFoto", typeof(string));
+        //    var dt = new DataTable();
+        //    dt.Columns.Add("Foto", typeof(Image));
+        //    dt.Columns.Add("Id", typeof(int));
+        //    dt.Columns.Add("Nome", typeof(string));
+        //    dt.Columns.Add("Login", typeof(string));
+        //    dt.Columns.Add("Senha", typeof(string));
+        //    dt.Columns.Add("UrlFoto", typeof(string));
 
-            foreach (var u in usuarios)
-            {
-                Image? img = null;
+        //    foreach (var u in usuarios)
+        //    {
+        //        Image? img = null;
 
-                if (!string.IsNullOrEmpty(u.UrlFoto) && File.Exists(u.UrlFoto))
-                {
-                    try
-                    {
-                        using (var fs = new FileStream(u.UrlFoto, FileMode.Open, FileAccess.Read))
-                        {
-                            img = Image.FromStream(fs);
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        img = null;
-                    }
+        //        if (!string.IsNullOrEmpty(u.UrlFoto) && File.Exists(u.UrlFoto))
+        //        {
+        //            try
+        //            {
+        //                using (var fs = new FileStream(u.UrlFoto, FileMode.Open, FileAccess.Read))
+        //                {
+        //                    img = Image.FromStream(fs);
+        //                }
+        //            }
+        //            catch (Exception)
+        //            {
+        //                img = null;
+        //            }
 
-                }
-                dt.Rows.Add(img, u.Id, u.Nome, u.Usuario, u.Senha, u.UrlFoto);
-            }
-            dgUsuario.DataSource = dt;
-        }
+        //        }
+        //        dt.Rows.Add(img, u.Id, u.Nome, u.Usuario, u.Senha, u.UrlFoto);
+        //    }
+        //    dgUsuario.DataSource = dt;
+        //}
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {

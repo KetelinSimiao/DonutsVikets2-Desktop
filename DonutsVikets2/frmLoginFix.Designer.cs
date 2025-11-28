@@ -38,8 +38,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnFechar = new Guna.UI2.WinForms.Guna2CircleButton();
             btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
             btnEntrar = new Guna.UI2.WinForms.Guna2Button();
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,29 +48,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // btnFechar
-            // 
-            btnFechar.BackColor = Color.FromArgb(255, 188, 217);
-            btnFechar.DisabledState.BorderColor = Color.DarkGray;
-            btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFechar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFechar.FillColor = Color.DarkRed;
-            btnFechar.Font = new Font("Segoe UI", 9F);
-            btnFechar.ForeColor = Color.White;
-            btnFechar.Location = new Point(739, 12);
-            btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            btnFechar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnFechar.Size = new Size(39, 29);
-            btnFechar.TabIndex = 16;
-            btnFechar.Text = " X";
-            // 
             // btnCadastrar
             // 
             btnCadastrar.BackColor = Color.FromArgb(255, 188, 217);
             btnCadastrar.BorderRadius = 20;
-            btnCadastrar.CustomizableEdges = customizableEdges2;
+            btnCadastrar.CustomizableEdges = customizableEdges1;
             btnCadastrar.DisabledState.BorderColor = Color.DarkGray;
             btnCadastrar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadastrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -80,9 +60,9 @@
             btnCadastrar.FillColor = Color.DarkRed;
             btnCadastrar.Font = new Font("Segoe UI", 9F);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(532, 366);
+            btnCadastrar.Location = new Point(628, 369);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnCadastrar.Size = new Size(96, 31);
             btnCadastrar.TabIndex = 14;
             btnCadastrar.Text = "Cadastrar";
@@ -92,7 +72,7 @@
             // 
             btnEntrar.BackColor = Color.FromArgb(255, 188, 217);
             btnEntrar.BorderRadius = 20;
-            btnEntrar.CustomizableEdges = customizableEdges4;
+            btnEntrar.CustomizableEdges = customizableEdges3;
             btnEntrar.DisabledState.BorderColor = Color.DarkGray;
             btnEntrar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEntrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -100,9 +80,9 @@
             btnEntrar.FillColor = Color.FromArgb(92, 176, 186);
             btnEntrar.Font = new Font("Segoe UI", 9F);
             btnEntrar.ForeColor = Color.White;
-            btnEntrar.Location = new Point(406, 366);
+            btnEntrar.Location = new Point(476, 369);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btnEntrar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnEntrar.Size = new Size(105, 31);
             btnEntrar.TabIndex = 15;
             btnEntrar.Text = "Entrar";
@@ -112,7 +92,7 @@
             // 
             txtSenha.BackColor = Color.FromArgb(255, 188, 217);
             txtSenha.BorderRadius = 20;
-            txtSenha.CustomizableEdges = customizableEdges6;
+            txtSenha.CustomizableEdges = customizableEdges5;
             txtSenha.DefaultText = "";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSenha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -122,11 +102,11 @@
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(434, 301);
+            txtSenha.Location = new Point(517, 306);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderText = "Senha";
             txtSenha.SelectedText = "";
-            txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtSenha.Size = new Size(152, 42);
             txtSenha.TabIndex = 12;
             txtSenha.TextChanged += txtSenha_TextChanged_1;
@@ -135,7 +115,7 @@
             // 
             txtUsuario.BackColor = Color.FromArgb(255, 188, 217);
             txtUsuario.BorderRadius = 20;
-            txtUsuario.CustomizableEdges = customizableEdges8;
+            txtUsuario.CustomizableEdges = customizableEdges7;
             txtUsuario.DefaultText = "";
             txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -145,11 +125,11 @@
             txtUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsuario.Font = new Font("Segoe UI", 9F);
             txtUsuario.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsuario.Location = new Point(434, 194);
+            txtUsuario.Location = new Point(517, 197);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Login";
             txtUsuario.SelectedText = "";
-            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtUsuario.Size = new Size(165, 43);
             txtUsuario.TabIndex = 13;
             txtUsuario.TextChanged += txtUsuario_TextChanged;
@@ -157,9 +137,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Pink_Aesthetic_Linktree_Background__5_;
-            pictureBox2.Location = new Point(-21, 3);
+            pictureBox2.Location = new Point(0, -1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(754, 434);
+            pictureBox2.Size = new Size(879, 440);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 17;
             pictureBox2.TabStop = false;
@@ -181,9 +161,9 @@
             guna2CircleButton1.FillColor = Color.DarkRed;
             guna2CircleButton1.Font = new Font("Segoe UI", 9F);
             guna2CircleButton1.ForeColor = Color.White;
-            guna2CircleButton1.Location = new Point(685, 12);
+            guna2CircleButton1.Location = new Point(828, 12);
             guna2CircleButton1.Name = "guna2CircleButton1";
-            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton1.Size = new Size(38, 24);
             guna2CircleButton1.TabIndex = 18;
@@ -194,9 +174,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(735, 439);
+            ClientSize = new Size(878, 439);
             Controls.Add(guna2CircleButton1);
-            Controls.Add(btnFechar);
             Controls.Add(btnCadastrar);
             Controls.Add(btnEntrar);
             Controls.Add(txtSenha);
@@ -210,8 +189,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2CircleButton btnFechar;
         private Guna.UI2.WinForms.Guna2Button btnCadastrar;
         private Guna.UI2.WinForms.Guna2Button btnEntrar;
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;

@@ -1,6 +1,6 @@
 ﻿namespace DonutsVikets2.UI
 {
-    partial class frmCadUsuario
+    partial class frmFuncionario
     {
         /// <summary>
         /// Required designer variable.

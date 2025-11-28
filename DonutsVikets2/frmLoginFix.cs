@@ -40,7 +40,7 @@ namespace DonutsVikets2.UI
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            frmCadUsuario obj = new();
+            frmFuncionario obj = new();
             obj.ShowDialog();
         }
 
@@ -86,6 +86,11 @@ namespace DonutsVikets2.UI
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
         {
 
         }

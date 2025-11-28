@@ -3,7 +3,7 @@ using DonutsVikets.DTO;
 
 namespace DonutsVikets.BLL
 {
-    class ProdutosBLL
+   public class ProdutosBLL
     {
 
         public class ProdutoBLL
@@ -18,7 +18,7 @@ namespace DonutsVikets.BLL
                 Database.Produtos.Add(produtoDTO);
 
             }
-            public List<ProdutosDTO> ListarCursos() => Database.Produtos;
+            public List<ProdutosDTO> ListarProduto() => Database.Produtos;
 
             public ProdutosDTO GetbyID(int ID)
             {
@@ -30,7 +30,49 @@ namespace DonutsVikets.BLL
 
         }
 
+        public void AtualizarProduto(ProdutosDTO produtoDTO)
+        {
+            var produtoExistente = Database.Produtos.FirstOrDefault(produto => produto.Id == produtoDTO.Id);
 
+            if (produtoExistente == null)
+            {
+                throw new Exception("Aluno não encontrado.");
+            }
+
+
+            if (string.IsNullOrWhiteSpace(produtoDTO.Nome))
+            {
+                throw new Exception("Nome é obrigatório.");
+
+            }
+
+            produtoExistente.Nome = produtoDTO.Nome;
+            produtoExistente.Preco = produtoDTO.Preco;
+            produtoExistente.Descricao = produtoDTO.Descricao;
+            produtoExistente.Categoria = produtoDTO.Categoria;
+            produtoExistente.Disponivel = produtoDTO.Disponivel;
+            produtoExistente.TempoPreparo = produtoDTO.TempoPreparo;
+            produtoExistente.DataCadastro = produtoDTO.DataCadastro;
+            
+
+        }
+
+        public void RemoverProduto(int id)
+        {
+            var produto = Database.Produtos.FirstOrDefault(p => p.Id == id);
+
+            if (produto == null)
+            {
+                throw new Exception("Produto não encontrado");
+            }
+
+            Database.Produtos.Remove(produto);
+        }
+
+        public object ListarProduto()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
