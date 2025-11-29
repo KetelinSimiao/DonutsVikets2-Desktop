@@ -44,8 +44,7 @@ namespace DonutsVikets2.UI
 
         private void btnCadAcesso_Click(object sender, EventArgs e)
         {
-            frmFuncionario frmCadUsuario = new();
-            frmCadUsuario.Show();
+
         }
 
         private void btnProduto_Click(object sender, EventArgs e)
@@ -141,5 +140,8 @@ namespace DonutsVikets2.UI
         {
 
         }
+
+       
+
     }
 }

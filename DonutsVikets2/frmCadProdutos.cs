@@ -17,6 +17,10 @@ namespace DonutsVikets2.UI
     {
         private ProdutosBLL produtoBLL = new();
 
+        ProdutosBLL produtosBLL = new();
+
+        private int? produtoSelecionadoId = null;
+
         public frmCadProdutos()
         {
             InitializeComponent();
@@ -59,15 +63,17 @@ namespace DonutsVikets2.UI
 
             };
 
-            // funcionarioBLL.CadastrarFuncionario( funcionario);
+            produtosBLL.CadastrarProduto(produto);
 
-            //  MessageBox.Show($"Funcionario {funcionario.Nome} cadastrado com sucesso!");
+            MessageBox.Show($"Produto {produto.Nome} cadastrado com sucesso!");
 
-            // txtNomeFun.Text = string.Empty;
-            // txtCPF.Text = string.Empty;
-            //     txtContato.Text = string.Empty;
-            //  txtCargo.Text = string.Empty;
-            //dtpDataNascimento.Text = string.Empty;
+            txtNome.Text = string.Empty;
+            txtDescricao.Text = string.Empty;
+            txtPreco.Text = string.Empty;
+            txtCategoria.Text = string.Empty;
+            txtDisponivel.Text = string.Empty;
+            txtTempoPreparo.Text = string.Empty;
+            txtDataCadastro.Text = string.Empty;
 
         }
 
@@ -121,28 +127,28 @@ namespace DonutsVikets2.UI
             dt.Columns.Add("DataCadastro", typeof(string));
         }
 
-//                 foreach (var u in produto)
-//                {
-//                     Image? img = null;
+//                         foreach (var u in produto)
+//                        {
+//                             Image? img = null;
 
-//                     if (!string.IsNullOrEmpty(u.UrlFoto) && File.Exists(u.UrlFoto))
-//                     { 
-//                         try
-//                         {
-//                             using (var fs = new FileStream(u.UrlFoto, FileMode.Open, FileAccess.Read))
-//                             {
-//                                 img = Image.FromStream(fs);
-//                             }
+//                             if (!string.IsNullOrEmpty(u.UrlFoto) && File.Exists(u.UrlFoto))
+//                             { 
+//                                 try
+//                                 {
+//                                     using (var fs = new FileStream(u.UrlFoto, FileMode.Open, FileAccess.Read))
+//                                     {
+//                                         img = Image.FromStream(fs);
+//                                     }
 //}
-//                         catch (Exception)
-//                         {
+//                                 catch (Exception)
+//                                 {
 //    img = null;
 //}
 
-//                     }
-//                     dt.Rows.Add(img, u.Id, u.Nome, u.Usuario, u.Senha, u.UrlFoto);
-//                 }
-//                dgFuncionario.DataSource = dt;
+//                             }
+//                             dt.Rows.Add(img, u.Id, u.Nome, u.Usuario, u.Senha, u.UrlFoto);
+//                         }
+//                        dgFuncionario.DataSource = dt;
 
 private void btnAtualizar_Click(object sender, EventArgs e)
         {
@@ -177,17 +183,17 @@ private void btnAtualizar_Click(object sender, EventArgs e)
                         Nome = txtNome.Text.Trim(),
                         Descricao = txtDescricao.Text.Trim(),
                         Preco = txtPreco.Text.Trim(),
-                        Categoria= txtCategoria.Text.Trim(),
+                        Categoria = txtCategoria.Text.Trim(),
                         Disponivel = txtDisponivel.Text.Trim(),
                         TempoPreparo = txtTempoPreparo.Text.Trim(),
                         DataCadastro = txtDataCadastro.Text.Trim(),
 
                     };
 
-                ProdutosBLL.AtualizarProduto(produtos);
+                produtosBLL.AtualizarProduto(produtos);
 
-                MessageBox.Show("Produto atualizado com sucesso!")
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Produto atualizado com sucesso!", "sucesso",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 AtualizarGrid(); // recarrega a grid com imagem real
             }
@@ -220,6 +226,60 @@ private void btnAtualizar_Click(object sender, EventArgs e)
                 produtoBLL.RemoverProduto(id);
                 MessageBox.Show($"Aluno(a) {nome} removido com sucesso!");
                 AtualizarGrid();
+            }
+        }
+
+        private void BuscarProduto()
+        {
+            string termo = txtPesquisar.Text.Trim().ToLower();
+
+            var filtrados = produtosBLL.ListarProduto()
+                                    .Where(produto => produto.Nome.ToLower().Contains(termo))
+                                    .Select(produto => new
+                                    {
+                                        produto.Id,
+                                        produto.Nome,
+                                        produto.Descricao,
+                                        produto.Preco,
+                                        produto.Categoria,
+                                        produto.Disponivel,
+                                        produto.TempoPreparo,
+                                        produto.DataCadastro
+
+                                    }).ToList();
+
+            dgProduto.DataSource = filtrados;
+        }
+
+        private void dgProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            BuscarProduto();
+        }
+
+        private void dgProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgProduto
+                    .Rows[e.RowIndex];
+
+                produtoSelecionadoId = Convert.ToInt32(row.Cells["Id"].Value);
+                txtNome.Text = row.Cells["Nome"].Value.ToString();
+                txtPreco.Text = row.Cells["Nome"].Value.ToString();
+                txtDescricao.Text = row.Cells["Nome"].Value.ToString();
+                txtCategoria.Text = row.Cells["Nome"].Value.ToString();
+                txtDisponivel.Text = row.Cells["Nome"].Value.ToString();
+                txtTempoPreparo.Text = row.Cells["Nome"].Value.ToString();
+                txtDataCadastro.Text = row.Cells["Nome"].Value.ToString();
+
+
+
+                btnAtualizar.Enabled = true;
             }
         }
     }

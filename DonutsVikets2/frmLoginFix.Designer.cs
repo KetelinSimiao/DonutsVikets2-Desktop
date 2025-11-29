@@ -60,7 +60,7 @@
             btnCadastrar.FillColor = Color.DarkRed;
             btnCadastrar.Font = new Font("Segoe UI", 9F);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(628, 369);
+            btnCadastrar.Location = new Point(698, 453);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnCadastrar.Size = new Size(96, 31);
@@ -80,7 +80,7 @@
             btnEntrar.FillColor = Color.FromArgb(92, 176, 186);
             btnEntrar.Font = new Font("Segoe UI", 9F);
             btnEntrar.ForeColor = Color.White;
-            btnEntrar.Location = new Point(476, 369);
+            btnEntrar.Location = new Point(530, 453);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnEntrar.Size = new Size(105, 31);
@@ -102,7 +102,7 @@
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(517, 306);
+            txtSenha.Location = new Point(546, 367);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderText = "Senha";
             txtSenha.SelectedText = "";
@@ -125,7 +125,7 @@
             txtUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsuario.Font = new Font("Segoe UI", 9F);
             txtUsuario.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsuario.Location = new Point(517, 197);
+            txtUsuario.Location = new Point(546, 240);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Login";
             txtUsuario.SelectedText = "";
@@ -137,9 +137,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Pink_Aesthetic_Linktree_Background__5_;
-            pictureBox2.Location = new Point(0, -1);
+            pictureBox2.Location = new Point(-2, -2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(879, 440);
+            pictureBox2.Size = new Size(954, 530);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 17;
             pictureBox2.TabStop = false;
@@ -174,7 +174,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(878, 439);
+            ClientSize = new Size(953, 529);
             Controls.Add(guna2CircleButton1);
             Controls.Add(btnCadastrar);
             Controls.Add(btnEntrar);

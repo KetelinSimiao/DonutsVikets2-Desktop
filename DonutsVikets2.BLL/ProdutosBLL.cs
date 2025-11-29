@@ -69,7 +69,12 @@ namespace DonutsVikets.BLL
             Database.Produtos.Remove(produto);
         }
 
-        public object ListarProduto()
+        public List<ProdutosDTO> ListarProduto()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CadastrarProduto(object funcionario)
         {
             throw new NotImplementedException();
         }

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             txtUser = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,7 +54,7 @@
             pictureBox1.Image = Properties.Resources.Usuario;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(416, 456);
+            pictureBox1.Size = new Size(953, 528);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -64,7 +64,7 @@
             // 
             txtNome.BackColor = Color.FromArgb(255, 188, 217);
             txtNome.BorderRadius = 20;
-            txtNome.CustomizableEdges = customizableEdges10;
+            txtNome.CustomizableEdges = customizableEdges1;
             txtNome.DefaultText = "";
             txtNome.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNome.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -74,11 +74,11 @@
             txtNome.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNome.Font = new Font("Segoe UI", 9F);
             txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNome.Location = new Point(45, 191);
+            txtNome.Location = new Point(112, 223);
             txtNome.Name = "txtNome";
             txtNome.PlaceholderText = "";
             txtNome.SelectedText = "";
-            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtNome.Size = new Size(156, 35);
             txtNome.TabIndex = 1;
             // 
@@ -86,7 +86,7 @@
             // 
             txtUser.BackColor = Color.FromArgb(255, 188, 217);
             txtUser.BorderRadius = 20;
-            txtUser.CustomizableEdges = customizableEdges12;
+            txtUser.CustomizableEdges = customizableEdges3;
             txtUser.DefaultText = "";
             txtUser.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUser.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -96,11 +96,11 @@
             txtUser.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUser.Font = new Font("Segoe UI", 9F);
             txtUser.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUser.Location = new Point(45, 268);
+            txtUser.Location = new Point(112, 314);
             txtUser.Name = "txtUser";
             txtUser.PlaceholderText = "";
             txtUser.SelectedText = "";
-            txtUser.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            txtUser.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtUser.Size = new Size(156, 35);
             txtUser.TabIndex = 1;
             // 
@@ -108,7 +108,7 @@
             // 
             txtSenha.BackColor = Color.FromArgb(255, 188, 217);
             txtSenha.BorderRadius = 20;
-            txtSenha.CustomizableEdges = customizableEdges14;
+            txtSenha.CustomizableEdges = customizableEdges5;
             txtSenha.DefaultText = "";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSenha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -118,11 +118,11 @@
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(45, 362);
+            txtSenha.Location = new Point(112, 423);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderText = "";
             txtSenha.SelectedText = "";
-            txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtSenha.Size = new Size(156, 35);
             txtSenha.TabIndex = 1;
             // 
@@ -130,7 +130,7 @@
             // 
             btnCadastra.BackColor = Color.FromArgb(255, 188, 217);
             btnCadastra.BorderRadius = 20;
-            btnCadastra.CustomizableEdges = customizableEdges16;
+            btnCadastra.CustomizableEdges = customizableEdges7;
             btnCadastra.DisabledState.BorderColor = Color.DarkGray;
             btnCadastra.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadastra.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -138,9 +138,9 @@
             btnCadastra.FillColor = Color.PowderBlue;
             btnCadastra.Font = new Font("Segoe UI", 9F);
             btnCadastra.ForeColor = Color.White;
-            btnCadastra.Location = new Point(12, 407);
+            btnCadastra.Location = new Point(26, 486);
             btnCadastra.Name = "btnCadastra";
-            btnCadastra.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            btnCadastra.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnCadastra.Size = new Size(175, 31);
             btnCadastra.TabIndex = 2;
             btnCadastra.Text = "Cadastrar";
@@ -160,7 +160,7 @@
             btnFechar.ForeColor = Color.White;
             btnFechar.Location = new Point(385, 0);
             btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnFechar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnFechar.Size = new Size(31, 32);
             btnFechar.TabIndex = 3;
@@ -183,11 +183,11 @@
             guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             guna2MessageDialog1.Text = "Usuario (a) Cadastrado com Sucesso";
             // 
-            // frmCadUsuario
+            // frmFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(416, 450);
+            ClientSize = new Size(953, 529);
             Controls.Add(btnFechar);
             Controls.Add(btnCadastra);
             Controls.Add(txtSenha);
@@ -195,7 +195,7 @@
             Controls.Add(txtNome);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmCadUsuario";
+            Name = "frmFuncionario";
             Text = "frmCadUsuario";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
