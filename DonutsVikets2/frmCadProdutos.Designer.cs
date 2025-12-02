@@ -271,6 +271,7 @@
             txtDataCadastro.Size = new Size(244, 36);
             txtDataCadastro.TabIndex = 6;
             txtDataCadastro.Value = new DateTime(2025, 10, 24, 21, 32, 17, 905);
+            txtDataCadastro.ValueChanged += txtDataCadastro_ValueChanged;
             // 
             // dgProduto
             // 

@@ -36,7 +36,7 @@ namespace DonutsVikets.BLL
 
             if (produtoExistente == null)
             {
-                throw new Exception("Aluno não encontrado.");
+                throw new Exception("Produto não encontrado.");
             }
 
 

@@ -1,4 +1,5 @@
 ﻿using DonutsVikets.DTO;
+using DonutsVikets2.DTO;
 
 namespace DonutsVikets.DAL
 {
@@ -27,6 +28,7 @@ namespace DonutsVikets.DAL
             get => jsonDatabase.Ler<UsuarioDTO>("Usuarios.json");
             set => jsonDatabase.salvar("Usuarios.json", value);
         }
+        public static List<EstoqueDTO> Estoque { get; set; }
     }
 
 }

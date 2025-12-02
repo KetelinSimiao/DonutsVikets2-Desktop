@@ -127,30 +127,30 @@ namespace DonutsVikets2.UI
             dt.Columns.Add("DataCadastro", typeof(string));
         }
 
-//                         foreach (var u in produto)
-//                        {
-//                             Image? img = null;
+        //                         foreach (var u in produto)
+        //                        {
+        //                             Image? img = null;
 
-//                             if (!string.IsNullOrEmpty(u.UrlFoto) && File.Exists(u.UrlFoto))
-//                             { 
-//                                 try
-//                                 {
-//                                     using (var fs = new FileStream(u.UrlFoto, FileMode.Open, FileAccess.Read))
-//                                     {
-//                                         img = Image.FromStream(fs);
-//                                     }
-//}
-//                                 catch (Exception)
-//                                 {
-//    img = null;
-//}
+        //                             if (!string.IsNullOrEmpty(u.UrlFoto) && File.Exists(u.UrlFoto))
+        //                             { 
+        //                                 try
+        //                                 {
+        //                                     using (var fs = new FileStream(u.UrlFoto, FileMode.Open, FileAccess.Read))
+        //                                     {
+        //                                         img = Image.FromStream(fs);
+        //                                     }
+        //}
+        //                                 catch (Exception)
+        //                                 {
+        //    img = null;
+        //}
 
-//                             }
-//                             dt.Rows.Add(img, u.Id, u.Nome, u.Usuario, u.Senha, u.UrlFoto);
-//                         }
-//                        dgFuncionario.DataSource = dt;
+        //                             }
+        //                             dt.Rows.Add(img, u.Id, u.Nome, u.Usuario, u.Senha, u.UrlFoto);
+        //                         }
+        //                        dgFuncionario.DataSource = dt;
 
-private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -281,6 +281,11 @@ private void btnAtualizar_Click(object sender, EventArgs e)
 
                 btnAtualizar.Enabled = true;
             }
+        }
+
+        private void txtDataCadastro_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
