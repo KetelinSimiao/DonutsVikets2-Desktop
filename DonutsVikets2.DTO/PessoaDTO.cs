@@ -1,4 +1,4 @@
-﻿namespace DonutsVikets.DTO
+﻿namespace DonutsVikets2.DTO
 {
     public abstract class PessoaDTO
     {

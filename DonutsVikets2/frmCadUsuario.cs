@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DonutsVikets.BLL;
-using DonutsVikets.DAL;
-using DonutsVikets.DTO;
+using DonutsVikets2.BLL;
+using DonutsVikets2.DAL;
+using DonutsVikets2.DTO;
 
 namespace DonutsVikets2.UI
 {

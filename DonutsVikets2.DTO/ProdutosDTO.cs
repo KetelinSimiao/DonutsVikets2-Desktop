@@ -1,5 +1,5 @@
 ﻿
-namespace DonutsVikets.DTO
+namespace DonutsVikets2.DTO
 {
     public class ProdutosDTO
     {

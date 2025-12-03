@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 
-namespace DonutsVikets.DTO
+namespace DonutsVikets2.DTO
 {
     public class FuncionarioDTO: PessoaDTO
     {

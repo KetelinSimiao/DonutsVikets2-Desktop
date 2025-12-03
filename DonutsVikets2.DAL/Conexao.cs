@@ -14,7 +14,7 @@ namespace DonutsVikets2.DAL
             {
                 conexao = new SqlConnection(
                     @"Data Source=(localdb)\MSSQLLocalDB;
-                    Initial Catalog=DonutsVikets;
+                    Initial Catalog=DonutsVikets2;
                     Integrated Security = true");
                 conexao.Open();
             }

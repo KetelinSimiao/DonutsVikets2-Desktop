@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DonutsVikets.BLL;
+using DonutsVikets2.BLL;
 
 namespace DonutsVikets2.UI
 {
@@ -141,7 +141,15 @@ namespace DonutsVikets2.UI
 
         }
 
-       
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            frmEstoque frmEstoque = new();
+            frmEstoque.Show();
+        }
 
+        private void btnFecha_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

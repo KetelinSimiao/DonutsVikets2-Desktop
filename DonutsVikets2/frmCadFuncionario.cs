@@ -1,7 +1,7 @@
 ﻿using System.Data;
-using DonutsVikets.BLL;
-using DonutsVikets.DAL;
-using DonutsVikets.DTO;
+using DonutsVikets2.BLL;
+using DonutsVikets2.DAL;
+using DonutsVikets2.DTO;
 
 namespace DonutsVikets2.UI
 {

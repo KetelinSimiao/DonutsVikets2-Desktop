@@ -1,7 +1,7 @@
-﻿using DonutsVikets.DTO;
+﻿using DonutsVikets2.DTO;
 using DonutsVikets2.DTO;
 
-namespace DonutsVikets.DAL
+namespace DonutsVikets2.DAL
 {
     public static class Database
     {
@@ -11,9 +11,6 @@ namespace DonutsVikets.DAL
             set => jsonDatabase.salvar("Funcionario.json", value);
 
         }
-
-
-
 
         public static List<ProdutosDTO> Produtos
         {

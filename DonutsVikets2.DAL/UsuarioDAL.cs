@@ -1,7 +1,8 @@
 ﻿using System.Data;
-using DonutsVikets.DTO;
+using DonutsVikets2.DTO;
 using DonutsVikets2.DAL;
 using Microsoft.Data.SqlClient;
+using DonutsVikets2.DTO;
 
 
 
@@ -107,11 +108,7 @@ namespace TransformeseApp2.DAL
 
                 while (dataReader.Read())
                 {
-                    tipos.Add(new TipoUsuarioDTO
-                    {
-                        IdTipoUsuario = Convert.ToInt32(dataReader["IdTipoUsuario"]),
-                        DescricaoTipoUsuario = dataReader["DescricaoTipoUsuario"].ToString()
-                    });
+                    tipos.Add(NewMethod());
                 }
 
                 return tipos;
@@ -126,6 +123,6 @@ namespace TransformeseApp2.DAL
             }
         }
 
-
+       
     }
 }

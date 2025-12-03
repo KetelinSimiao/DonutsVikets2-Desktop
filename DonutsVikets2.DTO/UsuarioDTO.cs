@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace DonutsVikets.DTO
+namespace DonutsVikets2.DTO
 {
     public class UsuarioDTO : PessoaDTO
     {

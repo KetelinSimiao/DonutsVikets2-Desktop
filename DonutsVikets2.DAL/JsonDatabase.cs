@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace DonutsVikets.DAL
+namespace DonutsVikets2.DAL
 {
 
 

@@ -1,7 +1,7 @@
-﻿using DonutsVikets.DAL;
-using DonutsVikets.DTO;
+﻿using DonutsVikets2.DAL;
+using DonutsVikets2.DTO;
 
-namespace DonutsVikets.BLL
+namespace DonutsVikets2.BLL
 {
     public class UsuarioBLL : PessoaDTO
     {
